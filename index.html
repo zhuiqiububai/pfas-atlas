@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f1">
+  <meta name="description" content="PFAS Atlas：探索化合物、毒理终点与实验研究证据的研究型原型。">
+  <title>PFAS Atlas | 毒理知识探索</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#203b32;background:#f6f7f2;font-family:"DM Sans","Noto Sans SC",sans-serif;font-size:14px;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #cf9f60;outline-offset:3px}.shell{width:min(1320px,calc(100% - 100px));margin:0 auto}.site-header{height:84px;border-bottom:1px solid #dfe6dd;background:#f8f9f5}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:11px;white-space:nowrap;font-size:19px;font-weight:700;letter-spacing:.02em;line-height:1}.brand-light{color:#6f887a;font-weight:500}.brand small{display:block;margin-top:6px;font-size:7px;letter-spacing:.19em;color:#82998b}.brand-mark{width:31px;height:31px;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:3px;transform:rotate(45deg);padding:2px}.brand-mark span{background:#315b4f;border-radius:2px}.brand-mark span:nth-child(2){background:#adc5b2}.brand-mark span:nth-child(3){background:#a5bbab}.main-nav{display:flex;align-items:center;gap:34px;font-size:13px;color:#61766a;white-space:nowrap}.main-nav a:hover{color:#1b4f3b}.header-actions{display:flex;align-items:center;gap:16px}.preview-badge{font-size:9px;letter-spacing:.12em;color:#769181;white-space:nowrap}.preview-badge i,.art-caption i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#83a88b;margin-right:5px;vertical-align:middle}.download-top{background:transparent;border:1px solid #cbd8cc;color:#315b4f;border-radius:4px;padding:11px 15px;font-size:12px;font-weight:600;white-space:nowrap}.download-top span,.text-button span{padding-left:9px}.hero{min-height:540px;display:grid;grid-template-columns:1fr .87fr;gap:70px;align-items:center;padding-top:51px;padding-bottom:52px}.eyebrow{font-size:9px;letter-spacing:.16em;font-weight:700;color:#789487;display:flex;align-items:center;gap:9px}.tiny-square{width:7px;height:7px;background:#8eaa92;display:inline-block}.eyebrow-number{margin-left:3px;color:#a1b4a5}h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(48px,4.65vw,69px);line-height:1.24;letter-spacing:-.055em;margin:26px 0 18px;font-weight:600;color:#1d4034}.hero h1 em,.sources-layout h2 em{font-style:normal;color:#6e997f}.hero-lede{font-size:16px;line-height:1.95;color:#71877b;margin-bottom:31px}.search-box{height:61px;display:flex;align-items:center;background:#fff;border:1px solid #d5e0d5;border-radius:5px;padding:5px;box-shadow:0 8px 25px rgba(39,76,56,.055)}.search-box select{border:0;background:transparent;color:#567062;outline:none;width:95px;padding-left:11px;font-size:12px}.search-divider{height:24px;border-left:1px solid #e4e9e1}.search-box input{flex:1;width:0;min-width:0;border:0;outline:0;padding:0 13px;color:#274638;font-size:13px}.search-box input::placeholder,.table-search input::placeholder{color:#a6b7aa}.search-box button,.dark-button{border:0;background:#315e4e;color:white;border-radius:3px;padding:15px 22px;font-weight:600;font-size:12px;white-space:nowrap}.search-box button span,.dark-button span{margin-left:12px}.search-box button:hover,.dark-button:hover{background:#244b3e}.quick-search{display:flex;align-items:center;gap:8px;margin-top:17px;font-size:11px;color:#91a298}.quick-search span{margin-right:3px}.quick-search button{border:1px solid #dfe6dd;background:transparent;border-radius:3px;color:#6c8273;font-size:10px;padding:5px 9px}.quick-search button:hover{background:#e6eee4}.search-feedback{height:15px;font-size:11px;color:#8d7153;margin:8px 0 0}.hero-art{height:394px;position:relative;overflow:hidden;background:#e7efe5;border:1px solid #d9e6d9;border-radius:6px}.art-grid{position:absolute;inset:0;background-image:linear-gradient(#cdddcf 1px,transparent 1px),linear-gradient(90deg,#cdddcf 1px,transparent 1px);background-size:34px 34px;opacity:.35;mask-image:linear-gradient(transparent,#000 22%,#000 75%,transparent)}.art-top,.art-caption{position:absolute;left:24px;right:24px;z-index:1;display:flex;justify-content:space-between;color:#849d8a;font-size:9px;letter-spacing:.11em}.art-top{top:22px}.art-top b{font-size:13px;margin-left:10px;font-weight:400}.hero-graphic{position:absolute;inset:18px 0 0;width:100%;height:calc(100% - 20px)}.art-caption{bottom:21px}.stats-band{background:#e9eee7;border-top:1px solid #e0e8dd;border-bottom:1px solid #dce6d9}.stats-inner{min-height:116px;display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr auto;align-items:center;gap:26px}.stats-intro .eyebrow{font-size:8px;margin-bottom:11px}.stats-intro strong{font-size:14px;font-weight:600}.stat{display:flex;align-items:center;gap:13px;border-left:1px solid #cfddd0;padding-left:28px}.stat strong{font-family:"DM Serif Display",serif;font-size:37px;font-weight:400;line-height:1;color:#456e5a}.stat span{font-size:12px;font-weight:600;white-space:nowrap}.stat small{display:block;font-size:8px;letter-spacing:.08em;margin-top:6px;color:#91a698;font-weight:500}.stat-link{font-size:11px;color:#557665;white-space:nowrap}.stat-link span{margin-left:12px}.section{padding-top:94px;padding-bottom:94px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}.section-heading h2,.sources-layout h2{font-size:35px;line-height:1.35;letter-spacing:-.04em;font-weight:600;margin:17px 0 10px;color:#244438}.period{color:#a1bca4}.section-heading p{color:#829589;font-size:13px;line-height:1.8;margin:0}.heading-note{font-size:9px;color:#a3b3a6;letter-spacing:.12em;white-space:nowrap}.heading-note span{margin-left:15px;color:#63806d}.catalog-layout{display:grid;grid-template-columns:minmax(0,1fr) 315px;gap:17px}.catalog-card,.detail-card,.network-frame{background:#fff;border:1px solid #e0e8df;border-radius:5px}.catalog-toolbar{display:flex;align-items:center;justify-content:space-between;padding:15px 19px;border-bottom:1px solid #e9eee8;gap:12px}.filter-group{display:flex;gap:5px;flex-wrap:wrap}.filter{background:transparent;border:0;border-radius:3px;color:#809186;font-size:11px;padding:9px 12px}.filter.active{background:#e7f0e7;color:#355d4b;font-weight:700}.filter span{margin-left:3px;color:#8ca393}.table-search{display:flex;gap:7px;align-items:center;color:#8ea195}.table-search span{font-size:21px;line-height:1}.table-search input{width:125px;border:0;outline:0;color:#375747;font-size:11px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;text-align:left}th{font-size:10px;letter-spacing:.03em;color:#9aab9e;font-weight:500;background:#fbfcfa;padding:13px 20px;white-space:nowrap}td{padding:15px 20px;border-bottom:1px solid #eef2ed;font-size:12px;color:#72877a;white-space:nowrap}tr.chemical-row{cursor:pointer}tr.chemical-row:hover,tr.chemical-row.selected{background:#f3f8f2}td .chemical-name{display:flex;align-items:center;gap:10px;color:#2f5042;font-weight:700}td .name-sub{font-size:10px;color:#9aab9e;margin-top:3px;font-weight:400}.chemical-icon{display:grid;place-items:center;flex:none;background:#eaf2e9;color:#668c70;width:31px;height:31px;border-radius:3px;font-size:13px}.type-tag{background:#f2f5ef;border-radius:3px;padding:5px 7px;font-size:10px;color:#809081}.rel-count{color:#537861}.row-arrow{color:#8da497;font-size:16px}.table-footer{display:flex;justify-content:space-between;gap:12px;color:#9aac9d;font-size:10px;padding:14px 20px}.table-footer span span{color:#607c69}.empty-row{text-align:center;color:#92a597;padding:42px 15px}.detail-card{padding:24px;align-self:stretch;min-height:390px}.detail-top{display:flex;justify-content:space-between;align-items:start}.micro-label{font-size:9px;letter-spacing:.12em;color:#9aafa0;font-weight:700}.detail-number{font-family:"DM Serif Display",serif;font-style:italic;color:#bccdc0;font-size:20px}.detail-symbol{height:68px;width:68px;border:1px solid #dce9db;background:#f2f8f1;display:grid;place-items:center;margin:28px 0 17px;color:#5d8969;font-family:"DM Serif Display",serif;font-size:28px;border-radius:4px}.detail-card h3{font-size:26px;margin:0 0 5px;letter-spacing:-.04em}.detail-desc{font-size:11px;line-height:1.7;color:#8da093;min-height:35px}.detail-list{border-top:1px solid #e8eee7;margin-top:20px}.detail-line{display:flex;justify-content:space-between;gap:8px;padding:11px 0;border-bottom:1px solid #edf1ec;font-size:11px}.detail-line span:first-child{color:#9cad9f}.detail-line span:last-child{text-align:right;color:#4a6a59}.detail-actions{display:flex;gap:10px;margin-top:19px}.detail-actions button,.detail-actions a{display:inline-flex;justify-content:center;align-items:center;border-radius:3px;font-size:10px;font-weight:600;padding:10px 11px}.detail-actions button{border:0;background:#315e4e;color:#fff;flex:1}.detail-actions a{border:1px solid #dce7da;color:#5f7d69}.network-section{background:#edf2eb;border-top:1px solid #e4ebe2;border-bottom:1px solid #e1e9df}.text-button{border:1px solid #cfded0;background:transparent;border-radius:3px;color:#557866;font-size:11px;padding:11px 14px}.network-top{padding:20px 25px 17px;display:flex;align-items:end;justify-content:space-between;border-bottom:1px solid #edf1ec;gap:15px}.network-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px}.network-tabs button{font-size:10px;border:1px solid #e3ebe1;border-radius:3px;padding:7px 10px;background:#fff;color:#7d9384}.network-tabs button.active{background:#315e4e;color:#fff;border-color:#315e4e}.network-count{font-size:10px;color:#9caea0;white-space:nowrap}.network-layout{display:grid;grid-template-columns:1.12fr .88fr}.graph-panel{min-width:0;border-right:1px solid #edf1ec;padding:21px 25px 13px}.graph-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:10px;color:#8aa092}.legend-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:4px}.legend-dot.green{background:#56896b}.legend-dot.gold{background:#d1a879}.legend-dot.blue{background:#8baeb0}.graph{height:350px;display:grid;place-items:center}.graph svg{width:100%;height:100%;overflow:visible}.graph-node{cursor:pointer}.graph-node:focus{outline:none}.graph-node:focus circle{stroke:#bc8c55;stroke-width:3}.graph-node:hover circle,.graph-node.chosen circle{stroke:#b59064;stroke-width:3}.graph-note{font-size:10px;color:#a3b2a5;margin:0;text-align:center;line-height:1.6}.evidence-panel{padding:24px 25px;max-height:475px;overflow:auto}.evidence-header{display:flex;justify-content:space-between;align-items:end;margin-bottom:8px}.evidence-header h3{font-size:17px;margin:8px 0 0;color:#315346}.evidence-header h3 span{font-family:"DM Serif Display",serif;color:#9cb4a2;font-size:17px;font-weight:400;margin-left:4px}.clear-node{border:0;background:transparent;color:#6a9079;font-size:10px}.evidence-item{padding:15px 0;border-bottom:1px solid #edf1ec}.evidence-item:last-child{border-bottom:0}.evidence-top{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.evidence-tag{font-size:9px;border-radius:2px;padding:4px 6px;background:#f7eee5;color:#af8056}.evidence-tag.lab{background:#e9f1f0;color:#699093}.evidence-top h4{font-size:12px;margin:0;color:#3e5d4c}.evidence-item p{color:#8b9d90;font-size:10px;line-height:1.75;margin:8px 0 6px}.evidence-item a{font-size:10px;color:#628973;font-weight:600}.network-caveat{display:flex;gap:10px;margin-top:17px;align-items:flex-start;color:#879b8c}.caveat-icon{flex:none;width:18px;height:18px;border:1px solid #a6b9a8;border-radius:50%;text-align:center;font-size:11px;font-style:italic}.network-caveat p{font-size:11px;line-height:1.8;margin:0}.network-caveat strong{color:#67806e}.case-card{display:grid;grid-template-columns:.85fr 1.15fr;border:1px solid #e1e9df;border-radius:5px;overflow:hidden;background:#fff}.case-left{background:#e4ede1;min-height:430px;position:relative;overflow:hidden;padding:25px}.case-kicker{display:flex;justify-content:space-between;color:#839f89;font-size:9px;letter-spacing:.12em}.case-illustration{position:absolute;inset:50px 0 40px;display:grid;place-items:center}.cosmetic-jar{position:relative;width:132px;z-index:2;transform:rotate(-8deg);filter:drop-shadow(0 20px 18px rgba(84,117,88,.13))}.jar-lid{height:24px;background:#587c65;border-radius:8px 8px 3px 3px;border-bottom:4px solid #456a53}.jar-body{height:135px;background:linear-gradient(100deg,#b9cfb2,#dce9d4 50%,#afc8ab);border-radius:5px 5px 15px 15px;display:grid;place-items:center;text-align:center;color:#67856c;font-size:15px;font-family:"DM Serif Display",serif;letter-spacing:.04em}.jar-body b{font-family:"DM Sans",sans-serif;font-size:7px;letter-spacing:.17em}.orbit{position:absolute;border:1px solid #bdd0bc;border-radius:50%}.o1{height:245px;width:245px}.o2{height:310px;width:310px;border-style:dashed}.art-dot{position:absolute;border-radius:50%;background:#9ebc9c;width:9px;height:9px}.d1{top:28%;left:23%}.d2{top:38%;right:20%;background:#d3af88}.d3{bottom:18%;right:36%}.art-float{position:absolute;right:14%;bottom:26%;font-size:8px;line-height:1.5;letter-spacing:.12em;color:#8ca48c}.case-caption{position:absolute;bottom:24px;left:26px;color:#617f69;font-size:12px;line-height:1.7;margin:0}.case-caption span{font-size:8px;letter-spacing:.12em;color:#96ad99}.case-content{padding:47px 51px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.case-badge{font-size:10px;background:#edf4ea;color:#7b9b80;padding:7px 9px;border-radius:3px}.case-content h3{font-size:29px;line-height:1.4;margin:20px 0 13px;color:#294c3d;letter-spacing:-.04em}.case-content>p{color:#84978a;font-size:12px;line-height:1.85;max-width:520px}.case-stats{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 16px}.case-stats>div{border-left:1px solid #dfe9dd;padding-left:15px}.case-stats strong{font-family:"DM Serif Display",serif;font-size:30px;font-weight:400;color:#517962}.case-stats strong span{font-size:16px;color:#adbfad}.case-stats small{display:block;color:#94a597;font-size:10px;margin-top:4px}.case-content .case-footnote{font-size:10px;color:#a2b2a5;margin-bottom:19px}.dark-button{display:inline-flex;align-items:center}.pathway{margin-top:19px;padding:22px 25px;border:1px solid #e2eae0;background:#fbfcf9;border-radius:4px;display:flex;align-items:center;gap:40px}.pathway>.micro-label{width:150px;flex:none}.pathway-steps{display:flex;justify-content:space-between;align-items:center;gap:14px;width:100%}.pathway-steps>div{display:flex;gap:9px;align-items:center}.pathway-steps b{font-family:"DM Serif Display",serif;color:#a8bfaa;font-weight:400;font-size:20px}.pathway-steps span{font-size:11px;color:#577363;white-space:nowrap}.pathway-steps small{display:block;font-size:9px;color:#acbaad;margin-top:5px}.pathway-steps i{font-style:normal;color:#b5c7b7}.sources-section{background:#2d5547;color:#e9f2e9}.sources-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}.sources-layout .eyebrow{color:#9bb7a0}.sources-layout h2{color:#f0f6ee;font-size:38px;margin:20px 0}.sources-layout h2 em{color:#adcfb0}.sources-intro{color:#b4cabe;font-size:13px;line-height:2;max-width:440px}.source-disclaimer{margin-top:26px;border:1px solid #648474;border-radius:4px;padding:17px 19px;max-width:440px}.source-disclaimer strong{color:#d3e3d4;font-size:11px}.source-disclaimer p{margin:7px 0 0;color:#abc1b2;font-size:10px;line-height:1.8}.source-title{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.14em;color:#a8c1ad;margin-bottom:15px}.source-list{border-top:1px solid #668677}.source-list a{display:grid;grid-template-columns:35px 1fr 20px;gap:10px;padding:17px 0;border-bottom:1px solid #668677;align-items:center;color:#daeadb}.source-list a:hover b{color:#fff}.source-no{color:#91ad98;font-size:10px}.source-list b{font-size:12px;font-weight:600}.source-list small{display:block;color:#a7bead;font-size:10px;margin-top:5px}footer{background:#25493c;color:#dceadd}.footer-inner{min-height:120px;display:flex;align-items:center;justify-content:space-between;gap:30px}.footer-brand{font-size:18px;font-weight:700}.footer-brand span{color:#97b9a0;font-weight:400}.footer-brand small{display:block;font-size:8px;letter-spacing:.14em;color:#87aa91;margin-top:7px}.footer-inner p{font-size:11px;color:#b7cebd;line-height:1.8;margin:0}.footer-inner p span{font-size:9px;color:#87a790}.footer-inner>a{font-size:11px;color:#c0d6c4}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1150px){.shell{width:min(100% - 60px,1320px)}.main-nav{gap:18px}.preview-badge{display:none}.hero{gap:35px}.stats-inner{gap:15px}.stat{padding-left:17px}.catalog-layout{grid-template-columns:minmax(0,1fr) 275px}.sources-layout{gap:50px}.case-content{padding:35px}.pathway{gap:15px}.pathway>.micro-label{width:125px}}
+@media(max-width:850px){.site-header{height:auto;min-height:76px}.header-inner{flex-wrap:wrap;padding:17px 0;gap:16px}.main-nav{order:3;width:100%;overflow-x:auto;padding:2px 0 0}.header-actions{margin-left:auto}.hero{grid-template-columns:1fr;padding-top:55px;gap:35px}.hero h1{font-size:52px}.hero-art{height:340px}.stats-inner{grid-template-columns:repeat(3,1fr);padding:23px 0;row-gap:25px}.stats-intro{grid-column:span 2}.stat-link{justify-self:end}.stat{border-left:0;padding:0}.catalog-layout{grid-template-columns:1fr}.detail-card{min-height:0}.detail-symbol{margin-top:18px}.network-layout{grid-template-columns:1fr}.graph-panel{border-right:0;border-bottom:1px solid #edf1ec}.evidence-panel{max-height:none}.case-card{grid-template-columns:1fr 1fr}.case-content{padding:30px}.case-left{min-height:420px}.case-stats{gap:5px}.case-stats strong{font-size:25px}.pathway{display:block}.pathway-steps{margin-top:20px}.sources-layout{grid-template-columns:1fr;gap:45px}.section{padding-top:72px;padding-bottom:72px}}
+@media(max-width:580px){.shell{width:calc(100% - 36px)}.brand{font-size:17px}.brand-mark{width:26px;height:26px}.download-top{font-size:10px;padding:9px}.main-nav{gap:21px;font-size:12px}.hero{padding-top:42px}.hero h1{font-size:42px;margin-top:22px}.hero-lede{font-size:14px}.desktop-break{display:none}.search-box select{width:68px;padding-left:4px}.search-box input{font-size:11px;padding:0 8px}.search-box button{padding:15px 12px}.search-box button span{margin-left:3px}.quick-search{gap:5px}.quick-search button{padding:5px 7px}.hero-art{height:275px}.art-top,.art-caption{font-size:8px}.stats-inner{grid-template-columns:repeat(3,1fr)}.stats-intro{grid-column:1 / -1}.stat strong{font-size:29px}.stat{gap:7px}.stat span{font-size:10px}.stat small{font-size:7px}.stat-link{grid-column:1 / -1;justify-self:start}.section-heading h2,.sources-layout h2{font-size:29px}.heading-note{display:none}.catalog-toolbar{align-items:flex-start;flex-direction:column}.table-search{width:100%;border-top:1px solid #edf1ec;padding-top:10px}.table-search input{width:100%}th,td{padding-left:14px;padding-right:14px}.network-top{align-items:start;flex-direction:column}.graph-panel{padding-left:13px;padding-right:13px}.graph{height:300px}.graph-legend{gap:10px}.case-card{grid-template-columns:1fr}.case-left{min-height:310px}.case-content{padding:28px 23px}.case-content h3{font-size:26px}.case-stats strong{font-size:25px}.pathway-steps{display:grid;grid-template-columns:1fr 1fr;gap:20px}.pathway-steps i{display:none}.sources-layout{gap:35px}.footer-inner{padding:27px 0;align-items:start;flex-wrap:wrap}.footer-inner p{width:55%;text-align:right}.footer-inner>a{width:100%}}
+.catalog-card{min-width:0}
+@media(max-width:850px){.catalog-layout{grid-template-columns:minmax(0,1fr)}}
+.kinetics{padding-bottom:75px}.model-label{font-size:10px;color:#719281;border:1px solid #d8e6d8;border-radius:3px;padding:9px 12px;white-space:nowrap}.pk-notice{background:#f2f0e7;border:1px solid #e8e3d2;color:#837d68;padding:14px 18px;display:flex;gap:10px;align-items:flex-start;border-radius:4px;margin-bottom:15px}.pk-notice>span{border:1px solid #c5bda5;border-radius:50%;width:16px;height:16px;text-align:center;line-height:15px;flex:none;font-size:10px;font-style:italic}.pk-notice p{font-size:11px;line-height:1.8;margin:0}.pk-notice strong{color:#6e6e59}.pk-workspace{display:grid;grid-template-columns:330px minmax(0,1fr);gap:15px}.pk-controls,.pk-results{background:#fff;border:1px solid #e0e8df;border-radius:5px}.pk-controls{padding:23px}.pk-card-title,.pk-result-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}.pk-card-title b{display:block;font-size:16px;margin-top:7px}.pk-card-title button,.pk-export{border:0;background:transparent;font-size:10px;color:#7b9a85;padding:3px}.pk-field{display:flex;flex-direction:column;gap:7px;min-width:0}.pk-wide{grid-column:1 / -1}.pk-controls>.pk-field{margin-top:22px}.pk-field>span{display:flex;justify-content:space-between;gap:5px;color:#54705f;font-size:11px;font-weight:600}.pk-field small{font-size:10px;color:#9eb0a0;font-weight:400;white-space:nowrap}.pk-field input,.pk-field select{width:100%;height:36px;border:1px solid #dfe9df;border-radius:3px;background:#fbfcfa;color:#315447;padding:0 10px;font-size:11px}.pk-field input:focus,.pk-field select:focus{border-color:#7ca389;outline:2px solid #e0eee0}.pk-preset-note{font-size:10px;color:#9bad9f;line-height:1.75;margin:9px 0 18px}.pk-input-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px 12px}.pk-error{font-size:10px;color:#a95646;line-height:1.6;margin:10px 0 0;min-height:0}.pk-error:empty{display:none}.pk-run{width:100%;border:0;border-radius:3px;background:#315e4e;color:#fff;font-weight:600;padding:13px 15px;margin-top:18px;font-size:11px;text-align:left}.pk-run span{float:right}.pk-run:hover{background:#244b3e}.pk-input-foot{color:#a0b0a2;font-size:10px;line-height:1.8;margin:12px 0 0}.pk-results{min-width:0;padding:23px 26px}.pk-result-head h3{font-size:18px;margin:9px 0 7px}.pk-result-head p{font-size:10px;color:#98aa9b;margin:0}.pk-export{white-space:nowrap;border:1px solid #dfe9df;padding:9px;border-radius:3px}.pk-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:10px;color:#829889;margin-top:24px}.pk-line{display:inline-block;width:18px;border-top:2px solid #3f7a5d;vertical-align:middle;margin-right:4px}.pk-line.short{border-color:#d2a579;border-top-style:dashed}.pk-line.long{border-color:#91aeb0;border-top-style:dashed}.pk-chart{width:100%;margin-top:11px}.pk-chart svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}.pk-readout{min-height:28px;color:#8da195;font-size:10px;padding-left:14%;line-height:1.7}.pk-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-top:1px solid #edf2eb;margin-top:7px;padding-top:20px}.pk-metrics>div{min-width:0;border-left:1px solid #e5ede3;padding-left:13px}.pk-metrics span{display:block;color:#94a99b;font-size:10px;margin-bottom:5px}.pk-metrics strong{font-family:"DM Serif Display",serif;font-size:23px;color:#466f59;font-weight:400}.pk-metrics small{font-size:9px;color:#a8baaa;margin-left:4px}.pk-compare-note{font-size:10px;line-height:1.8;color:#a0afa1;margin:21px 0 0}.pk-compare-note strong{color:#819484}.pk-method{margin-top:15px;background:#fbfcf9;border:1px solid #e2eae0;border-radius:4px}.pk-method summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;padding:17px 20px;color:#587764;font-size:11px;font-weight:600}.pk-method summary::-webkit-details-marker{display:none}.pk-method summary span{font-size:15px;color:#94ad9a}.pk-method-content{padding:0 20px 20px;color:#82988a;font-size:11px;line-height:1.9}.pk-method-content p{margin:0 0 13px}.pk-formula{background:#eef4ed;border-left:3px solid #b5ceb8;padding:12px 14px;color:#5b7764;overflow:auto;font-family:"DM Sans","Noto Sans SC",sans-serif}.pk-source-links{display:flex;gap:18px;flex-wrap:wrap}.pk-source-links a{font-size:10px;color:#578368;font-weight:600}.pk-source-links a:hover{text-decoration:underline}
+@media(max-width:1050px){.main-nav{gap:15px}.header-actions .download-top{padding:9px}.pk-workspace{grid-template-columns:300px minmax(0,1fr)}}
+@media(max-width:850px){.pk-workspace{grid-template-columns:minmax(0,1fr)}.pk-controls{padding:22px}.pk-input-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.pk-results{padding:22px}}
+@media(max-width:580px){.model-label{display:none}.pk-input-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pk-results{padding:19px 15px}.pk-result-head{flex-wrap:wrap}.pk-legend{gap:10px}.pk-metrics strong{font-size:20px}.pk-metrics>div{padding-left:7px}.pk-readout{padding-left:0}.pk-source-links{display:grid;gap:8px}}
+.pk-export:disabled{opacity:.45;cursor:not-allowed}
+
+</style>
+  
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="#top" aria-label="PFAS Atlas 首页"><span class="brand-mark"><span></span><span></span><span></span><span></span></span><span>PFAS<span class="brand-light"> / ATLAS</span><small>TOXICOLOGY KNOWLEDGE</small></span></a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#top">首页</a><a href="#compounds">化合物</a><a href="#network">关系图谱</a><a href="#kinetics">动力学模拟</a><a href="#cosmetics">暴露专题</a><a href="#sources">数据来源</a>
+      </nav>
+      <div class="header-actions"><span class="preview-badge"><i></i> RESEARCH PREVIEW</span><button class="download-top" data-export="all">下载数据 <span>↓</span></button></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="tiny-square"></span> CONNECTING EXPOSURE &amp; EVIDENCE <span class="eyebrow-number">/ 01</span></div>
+        <h1>看见 PFAS 的<br><em>毒理关联。</em></h1>
+        <p class="hero-lede">从化合物、分子机制到健康终点，<br class="desktop-break">在有据可查的关系中探索 PFAS。</p>
+        <form class="search-box" id="global-search" role="search">
+          <label class="sr-only" for="search-type">检索类型</label>
+          <select id="search-type" aria-label="检索类型"><option value="all">全部</option><option value="chemical">化合物</option><option value="endpoint">终点 / 靶点</option></select>
+          <span class="search-divider"></span>
+          <label class="sr-only" for="search-input">输入化合物、CAS 号或毒理终点</label>
+          <input id="search-input" type="search" placeholder="搜索名称、CAS 号、靶点或终点" autocomplete="off">
+          <button type="submit" aria-label="搜索">搜索 <span>↗</span></button>
+        </form>
+        <div class="quick-search"><span>试一试</span><button data-query="PFOA">PFOA</button><button data-query="PFOS">PFOS</button><button data-query="PPARA">PPARA</button><button data-query="胆固醇">胆固醇</button></div>
+        <p id="search-feedback" class="search-feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-top"><span>THE EVIDENCE LANDSCAPE</span><span>FIG. 001 <b>↗</b></span></div>
+        <div class="art-grid"></div>
+        <svg class="hero-graphic" viewBox="0 0 520 365" fill="none">
+          <circle cx="259" cy="178" r="122" stroke="#b9c9bc" stroke-dasharray="3 7"/><circle cx="259" cy="178" r="93" stroke="#cbd9cc"/><circle cx="259" cy="178" r="58" stroke="#b9cbbc"/>
+          <path d="M259 178 L133 96 M259 178 L395 92 M259 178 L425 208 M259 178 L359 290 M259 178 L130 273 M259 178 L91 175" stroke="#8ea998" stroke-width="1.25"/>
+          <circle cx="259" cy="178" r="39" fill="#315c50"/><circle cx="259" cy="178" r="48" stroke="#789b89" opacity=".65"/>
+          <text x="259" y="174" text-anchor="middle" fill="white" font-size="18" font-family="DM Sans" font-weight="700">PFAS</text><text x="259" y="193" text-anchor="middle" fill="#c7ddce" font-size="8" font-family="DM Sans" letter-spacing="2">EXPOSURE</text>
+          <circle cx="133" cy="96" r="8" fill="#96ad8f"/><circle cx="395" cy="92" r="8" fill="#d9a67b"/><circle cx="425" cy="208" r="8" fill="#adbfad"/><circle cx="359" cy="290" r="8" fill="#c7a47e"/><circle cx="130" cy="273" r="8" fill="#96ad8f"/><circle cx="91" cy="175" r="8" fill="#b1c4ad"/>
+          <circle cx="133" cy="96" r="16" stroke="#aabda7"/><circle cx="395" cy="92" r="16" stroke="#d8bea4"/><circle cx="425" cy="208" r="16" stroke="#c4d1c2"/><circle cx="359" cy="290" r="16" stroke="#d8c3ad"/>
+          <text x="72" y="69" fill="#526a5c" font-size="10" font-family="DM Sans" letter-spacing="1">CHEMICALS</text><text x="374" y="61" fill="#806e5a" font-size="10" font-family="DM Sans" letter-spacing="1">TARGETS</text><text x="386" y="240" fill="#526a5c" font-size="10" font-family="DM Sans" letter-spacing="1">OUTCOMES</text><text x="324" y="324" fill="#806e5a" font-size="10" font-family="DM Sans" letter-spacing="1">EVIDENCE</text><text x="69" y="306" fill="#526a5c" font-size="10" font-family="DM Sans" letter-spacing="1">EXPOSURE</text>
+        </svg>
+        <div class="art-caption"><span><i></i> A CONNECTED VIEW</span><span>毒理证据 · 概念示意</span></div>
+      </div>
+    </section>
+
+    <section class="stats-band" aria-label="本原型数据概览"><div class="shell stats-inner"><div class="stats-intro"><span class="eyebrow">A SMALL START, CLEAR SOURCES</span><strong>从可追溯的数据开始</strong></div><div class="stat"><strong id="chemical-count">09</strong><span>示例化合物<small>CHEMICALS</small></span></div><div class="stat"><strong id="relation-count">18</strong><span>已整理关系<small>CURATED LINKS</small></span></div><div class="stat"><strong>01</strong><span>化妆品研究案例<small>CASE STUDY</small></span></div><a class="stat-link" href="#sources">了解数据范围 <span>↗</span></a></div></section>
+
+    <section class="shell section explore" id="compounds">
+      <div class="section-heading"><div><div class="eyebrow"><span class="tiny-square"></span> EXPLORE THE DATA <span class="eyebrow-number">/ 02</span></div><h2>从化合物开始探索<span class="period">.</span></h2><p>以名称或 CAS 号检索，查看已整理的毒理关联与来源。</p></div><div class="heading-note">CURATED CHEMICALS <span>↗</span></div></div>
+      <div class="catalog-layout"><div class="catalog-card"><div class="catalog-toolbar"><div class="filter-group" role="group" aria-label="筛选化合物类型"><button class="filter active" data-filter="all">全部 <span id="filter-total">09</span></button><button class="filter" data-filter="PFCA">羧酸类</button><button class="filter" data-filter="PFSA">磺酸类</button><button class="filter" data-filter="ETHER">醚类</button></div><label class="table-search"><span aria-hidden="true">⌕</span><span class="sr-only">筛选化合物</span><input id="table-query" type="search" placeholder="筛选名称 / CAS"></label></div><div class="table-wrap"><table><thead><tr><th>化合物</th><th>类别</th><th>CAS 号</th><th>已整理关系</th><th><span class="sr-only">详情</span></th></tr></thead><tbody id="chemical-table"></tbody></table></div><div class="table-footer"><span id="table-status" aria-live="polite"></span><span>点击一行查看详情 <span>↗</span></span></div></div>
+      <aside class="detail-card" id="compound-detail" aria-live="polite"></aside></div>
+    </section>
+
+    <section class="network-section" id="network"><div class="shell section"><div class="section-heading"><div><div class="eyebrow"><span class="tiny-square"></span> RELATIONSHIP EXPLORER <span class="eyebrow-number">/ 03</span></div><h2>把证据连接起来<span class="period">.</span></h2><p>选择化合物，查看已整理的健康终点与分子机制。点击节点可筛选证据。</p></div><button class="text-button" data-export="relations">导出关系表 <span>↓</span></button></div>
+      <div class="network-frame"><div class="network-top"><div><span class="micro-label">EXPLORE BY COMPOUND</span><div id="network-tabs" class="network-tabs"></div></div><span class="network-count" id="network-count"></span></div><div class="network-layout"><div class="graph-panel"><div class="graph-legend"><span><i class="legend-dot green"></i> 化合物</span><span><i class="legend-dot gold"></i> 人群健康终点</span><span><i class="legend-dot blue"></i> 实验机制</span></div><div id="graph" class="graph"></div><p class="graph-note">线条表示所列来源中的研究关联，并不自动代表因果关系。</p></div><div class="evidence-panel"><div class="evidence-header"><div><span class="micro-label">EVIDENCE RECORDS</span><h3>相关证据 <span id="evidence-number"></span></h3></div><button id="clear-node" class="clear-node" hidden>显示全部</button></div><div id="evidence-list" class="evidence-list"></div></div></div></div>
+      <div class="network-caveat"><span class="caveat-icon">i</span><p><strong>如何读这张图？</strong> 人群研究中的“关联”不是因果证明；细胞或动物实验涉及的剂量、物种和条件也不能直接等同于人体风险。每条关系都可以回到来源核对。</p></div>
+    </div></section>
+
+    <section class="shell section kinetics" id="kinetics">
+      <div class="section-heading"><div><div class="eyebrow"><span class="tiny-square"></span> TOXICOKINETIC SIMULATION <span class="eyebrow-number">/ 04</span></div><h2>模拟体内浓度变化<span class="period">.</span></h2><p>调整暴露和动力学参数，观察持续暴露及停止暴露后的模型曲线。</p></div><span class="model-label">单室模型 · 情景模拟</span></div>
+      <div class="pk-notice"><span>i</span><p><strong>研究演示，非个体预测。</strong> 曲线由输入假设计算，不是实测值或毒性风险结论。不同人群、暴露途径和化学物的参数可能不同。</p></div>
+      <div class="pk-workspace">
+        <form class="pk-controls" id="pk-form" novalidate>
+          <div class="pk-card-title"><span><span class="micro-label">MODEL INPUTS</span><b>模拟参数</b></span><button type="button" id="pk-reset">重置 ↺</button></div>
+          <label class="pk-field pk-wide"><span>化合物参考参数</span><select id="pk-preset"><option value="PFOA">PFOA · 人群参考</option><option value="PFOS">PFOS · 人群参考</option><option value="PFNA">PFNA · 人群参考</option><option value="PFHxS">PFHxS · 人群参考</option><option value="custom">自定义参数</option></select></label>
+          <p class="pk-preset-note" id="pk-preset-note">预设仅填入消除半衰期和分布容积；剂量、吸收比例等为示例假设。</p>
+          <div class="pk-input-grid">
+            <label class="pk-field"><span>外部暴露剂量 <small>µg/kg/天</small></span><input id="pk-dose" type="number" min="0" max="1000000" step="any" value="0.001" required></label>
+            <label class="pk-field"><span>吸收比例 <small>%</small></span><input id="pk-absorption" type="number" min="0" max="100" step="any" value="100" required></label>
+            <label class="pk-field"><span>消除半衰期 <small>天</small></span><input id="pk-half" type="number" min="0.01" max="100000" step="any" value="1146.9" required></label>
+            <label class="pk-field"><span>分布容积 Vd <small>L/kg</small></span><input id="pk-vd" type="number" min="0.001" max="1000" step="any" value="0.43" required></label>
+            <label class="pk-field"><span>持续暴露时间 <small>天</small></span><input id="pk-duration" type="number" min="0" max="36500" step="any" value="1825" required></label>
+            <label class="pk-field"><span>总模拟时长 <small>天</small></span><input id="pk-horizon" type="number" min="1" max="36500" step="any" value="3650" required></label>
+            <label class="pk-field pk-wide"><span>初始血清浓度 C₀ <small>µg/L</small></span><input id="pk-initial" type="number" min="0" max="1000000" step="any" value="0" required></label>
+          </div>
+          <p class="pk-error" id="pk-error" role="alert" aria-live="assertive"></p>
+          <button class="pk-run" type="submit">更新模拟曲线 <span>↗</span></button>
+          <p class="pk-input-foot">假设吸收后即时进入单一体室；剂量按体重标准化，吸收比例需匹配具体暴露途径。</p>
+        </form>
+        <div class="pk-results"><div class="pk-result-head"><div><span class="micro-label">CONCENTRATION OVER TIME</span><h3>血清浓度预测曲线</h3><p>基准情景与消除半衰期敏感性对比</p></div><button type="button" class="pk-export" id="pk-export">导出曲线数据 ↓</button></div>
+          <div class="pk-legend"><span><i class="pk-line base"></i> 输入半衰期</span><span><i class="pk-line short"></i> 0.5 倍半衰期</span><span><i class="pk-line long"></i> 2 倍半衰期</span></div>
+          <div id="pk-chart" class="pk-chart" aria-live="polite"></div>
+          <div class="pk-readout" id="pk-readout">将鼠标移到曲线上可查看对应时间点。</div>
+          <div class="pk-metrics"><div><span>基准情景 · 峰值</span><strong id="pk-max">—</strong><small>µg/L</small></div><div><span>基准情景 · 模拟终点</span><strong id="pk-final">—</strong><small>µg/L</small></div><div><span>暴露设定</span><strong id="pk-duration-result">—</strong><small>天</small></div></div>
+          <p class="pk-compare-note">两条对比线是人为设定的敏感性情景，<strong>不是置信区间</strong>。曲线未包含新的背景暴露、个体差异、混合物作用或生理变化。</p>
+        </div>
+      </div>
+      <details class="pk-method"><summary>模型方法、公式与参数来源 <span>＋</span></summary><div class="pk-method-content"><p>本模型假设恒定外部剂量以固定比例吸收，吸收后的物质进入单一体室，并按一级动力学消除。暴露停止后，浓度按同一消除速率下降。初始浓度 C₀ 只代表起始体内负荷，不包含持续背景暴露。</p><p class="pk-formula">k = ln(2) / 消除半衰期； C<sub>ss</sub> = F × D / (Vd × k)<br>暴露期间：C(t) = C<sub>ss</sub> + (C₀ − C<sub>ss</sub>)e<sup>−kt</sup><br>停止暴露后：C(t) = C(停止时) × e<sup>−k × 停止后时间</sup></p><p>预设半衰期和 Vd 为 Chiu 等基于饮水暴露研究得到的人群参数估计，换算按 365.25 天/年；其余参数为用户假设。若用于化妆品研究，需要独立估计产品浓度、用量、接触面积和皮肤吸收比例，不能把产品浓度直接当作体内剂量。</p><div class="pk-source-links"><a href="https://doi.org/10.1289/EHP10103" target="_blank" rel="noopener noreferrer">Chiu 等，2022：人群动力学参数 ↗</a><a href="https://www.ncbi.nlm.nih.gov/books/NBK592139/" target="_blank" rel="noopener noreferrer">ATSDR：一室模型与剂量换算 ↗</a><a href="https://pubmed.ncbi.nlm.nih.gov/38810496/" target="_blank" rel="noopener noreferrer">人皮肤模型中的 PFAS 吸收研究 ↗</a></div></div></details>
+    </section>
+
+    <section class="shell section cosmetics" id="cosmetics"><div class="section-heading"><div><div class="eyebrow"><span class="tiny-square"></span> EXPOSURE IN FOCUS <span class="eyebrow-number">/ 05</span></div><h2>从暴露场景出发<span class="period">.</span></h2><p>结合我们关注的化妆品问题，连接检测、暴露与毒理研究。</p></div><div class="heading-note">FEATURED RESEARCH <span>↗</span></div></div>
+      <div class="case-card"><div class="case-left"><div class="case-kicker"><span>01 / CASE STUDY</span><span>CHINA · 2026</span></div><div class="case-illustration" aria-hidden="true"><div class="cosmetic-jar"><div class="jar-lid"></div><div class="jar-body"><span>PFAS<br><b>RESEARCH</b></span></div></div><span class="orbit o1"></span><span class="orbit o2"></span><span class="art-dot d1"></span><span class="art-dot d2"></span><span class="art-dot d3"></span><span class="art-float">TARGETED<br>+ NON-TARGETED</span></div><p class="case-caption">化妆品中的 PFAS<br><span>OCCURRENCE &amp; EXPOSURE</span></p></div>
+      <div class="case-content"><div class="case-badge">研究案例 · 非总体代表性抽样</div><h3>31 件化妆品，<br>两种筛查视角</h3><p>一项中国市场研究结合靶向分析、非靶向筛查与机器学习，评估化妆品中的 PFAS 及潜在皮肤暴露风险。</p><div class="case-stats"><div><strong>20<span>/ 31</span></strong><small>靶向分析检出样品</small></div><div><strong>30<span>/ 31</span></strong><small>非靶向筛查检出样品</small></div><div><strong>16</strong><small>所研究的产品类别</small></div></div><p class="case-footnote">这是同一项小样本研究中的结果，两种方法的检出范围不同；检出不等于人体吸收剂量或已发生健康损害。</p><a class="dark-button" href="https://doi.org/10.1016/j.envpol.2026.127933" target="_blank" rel="noopener noreferrer">阅读原始研究 <span>↗</span></a></div></div>
+      <div class="pathway"><span class="micro-label">A RESEARCH PATHWAY</span><div class="pathway-steps"><div><b>01</b><span>产品与成分<small>识别潜在来源</small></span></div><i>→</i><div><b>02</b><span>检测与筛查<small>记录方法和浓度</small></span></div><i>→</i><div><b>03</b><span>接触与吸收<small>评估具体暴露条件</small></span></div><i>→</i><div><b>04</b><span>毒理与风险<small>追溯实验和人群证据</small></span></div></div></div>
+    </section>
+
+    <section class="sources-section" id="sources"><div class="shell section sources-layout"><div><div class="eyebrow"><span class="tiny-square"></span> ABOUT THE EVIDENCE <span class="eyebrow-number">/ 06</span></div><h2>每条线索，<br><em>都应有出处。</em></h2><p class="sources-intro">借鉴 HERB、ETCM、TCMSP 和 SymMap 的实体检索与关系组织方式，先建立一个范围明确、可回溯的 PFAS 毒理研究入口。</p><div class="source-disclaimer"><strong>关于当前版本</strong><p>这是小规模人工整理的研究原型，并非完整数据库，也未实时同步外部平台。未展示的化合物或关系不代表没有研究。自有样本、实验和患者级数据尚未接入。</p></div></div><div><div class="source-title"><span>核心来源 / SELECTED SOURCES</span><span>↗</span></div><div class="source-list"><a href="https://www.atsdr.cdc.gov/pfas/about/health-effects.html" target="_blank" rel="noopener noreferrer"><span class="source-no">01</span><span><b>ATSDR · PFAS 与健康影响</b><small>人群健康终点及化合物关联</small></span><span>↗</span></a><a href="https://pubmed.ncbi.nlm.nih.gov/21723365/" target="_blank" rel="noopener noreferrer"><span class="source-no">02</span><span><b>Bjork 等 · 核受体实验</b><small>PFOA / PFOS、PPARA 与肝细胞</small></span><span>↗</span></a><a href="https://doi.org/10.1016/j.envpol.2026.127933" target="_blank" rel="noopener noreferrer"><span class="source-no">03</span><span><b>Zhao 等 · 中国化妆品研究</b><small>靶向、非靶向筛查与机器学习</small></span><span>↗</span></a><a href="https://www.epa.gov/comptox-tools/comptox-chemicals-dashboard-about" target="_blank" rel="noopener noreferrer"><span class="source-no">04</span><span><b>US EPA · CompTox Dashboard</b><small>外部化学品、暴露与生物活性资源</small></span><span>↗</span></a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11701625/" target="_blank" rel="noopener noreferrer"><span class="source-no">05</span><span><b>HERB 2.0 · 设计参考</b><small>临床、实验与知识图谱组织方式</small></span><span>↗</span></a><a href="https://doi.org/10.1289/EHP10103" target="_blank" rel="noopener noreferrer"><span class="source-no">06</span><span><b>Chiu 等 · PFAS 人群动力学</b><small>四种 PFAS 的半衰期和分布容积</small></span><span>↗</span></a></div></div></div></section>
+  </main>
+  <footer><div class="shell footer-inner"><div class="footer-brand">PFAS <span>/ ATLAS</span><small>CONNECTING EXPOSURE &amp; EVIDENCE</small></div><p>为 PFAS 毒理研究而构建<br><span>研究原型 · 数据整理于 2026 年 11 月</span></p><a href="#top">回到顶部 ↑</a></div></footer>
+<script>
+'use strict';
+
+const ATSDR = 'https://www.atsdr.cdc.gov/pfas/about/health-effects.html';
+const PROFILE = 'https://www.ncbi.nlm.nih.gov/books/NBK592137/';
+const EPA_PFAS = 'https://www.epa.gov/system/files/documents/2022-09/EPA%20PFAS%20Container%20Leaching%20Study%2008122022_0.pdf';
+const BJORK = 'https://pubmed.ncbi.nlm.nih.gov/21723365/';
+
+const chemicals = [
+  {id:'PFOA',name:'全氟辛酸',en:'Perfluorooctanoic acid',cas:'335-67-1',family:'PFCA',familyName:'全氟羧酸',source:PROFILE},
+  {id:'PFOS',name:'全氟辛烷磺酸',en:'Perfluorooctanesulfonic acid',cas:'1763-23-1',family:'PFSA',familyName:'全氟磺酸',source:PROFILE},
+  {id:'PFHxS',name:'全氟己烷磺酸',en:'Perfluorohexanesulfonic acid',cas:'355-46-4',family:'PFSA',familyName:'全氟磺酸',source:PROFILE},
+  {id:'PFNA',name:'全氟壬酸',en:'Perfluorononanoic acid',cas:'375-95-1',family:'PFCA',familyName:'全氟羧酸',source:PROFILE},
+  {id:'PFDA',name:'全氟癸酸',en:'Perfluorodecanoic acid',cas:'335-76-2',family:'PFCA',familyName:'全氟羧酸',source:PROFILE},
+  {id:'PFBS',name:'全氟丁烷磺酸',en:'Perfluorobutanesulfonic acid',cas:'375-73-5',family:'PFSA',familyName:'全氟磺酸',source:PROFILE},
+  {id:'PFBA',name:'全氟丁酸',en:'Perfluorobutanoic acid',cas:'375-22-4',family:'PFCA',familyName:'全氟羧酸',source:PROFILE},
+  {id:'PFHxA',name:'全氟己酸',en:'Perfluorohexanoic acid',cas:'307-24-4',family:'PFCA',familyName:'全氟羧酸',source:PROFILE},
+  {id:'HFPO-DA',name:'六氟环氧丙烷二聚酸',en:'Hexafluoropropylene oxide dimer acid (GenX-related)',cas:'13252-13-6',family:'ETHER',familyName:'醚类 PFAS',source:EPA_PFAS}
+];
+
+const outcomes = {
+  cholesterol:{label:'胆固醇水平升高',short:'胆固醇升高',aliases:'胆固醇 血脂 cholesterol lipid metabolic 代谢'},
+  vaccine:{label:'部分疫苗抗体反应降低',short:'疫苗抗体反应',aliases:'疫苗 抗体 免疫 vaccine antibody immune'},
+  liver:{label:'肝酶变化',short:'肝酶变化',aliases:'肝脏 肝酶 肝功能 liver hepatic enzymes'},
+  pregnancy:{label:'妊娠高血压或先兆子痫',short:'妊娠高血压',aliases:'妊娠 孕妇 高血压 先兆子痫 pregnancy hypertension'},
+  birth:{label:'出生体重小幅降低',short:'出生体重',aliases:'出生体重 生长 发育 birth weight development'},
+  cancer:{label:'肾癌与睾丸癌',short:'肾癌 / 睾丸癌',aliases:'肾癌 睾丸癌 癌症 肿瘤 kidney testicular cancer'},
+  ppara:{label:'PPARA 相关代谢反应',short:'PPARA 机制',aliases:'PPARA PPAR alpha 核受体 靶点 基因 receptor gene target'}
+};
+
+const relations = [];
+function addGroup(ids, key, kind, source, sourceName) {
+  ids.forEach(function(id){ relations.push({chemical:id,endpoint:key,kind:kind,source:source,sourceName:sourceName}); });
+}
+addGroup(['PFOA','PFOS','PFNA','PFDA'],'cholesterol','population',ATSDR,'ATSDR · 人群健康影响');
+addGroup(['PFOA','PFOS','PFHxS','PFDA'],'vaccine','population',ATSDR,'ATSDR · 人群健康影响');
+addGroup(['PFOA','PFOS','PFHxS'],'liver','population',ATSDR,'ATSDR · 人群健康影响');
+addGroup(['PFOA','PFOS'],'pregnancy','population',ATSDR,'ATSDR · 人群健康影响');
+addGroup(['PFOA','PFOS'],'birth','population',ATSDR,'ATSDR · 人群健康影响');
+addGroup(['PFOA'],'cancer','population',ATSDR,'ATSDR · 人群健康影响');
+addGroup(['PFOA','PFOS'],'ppara','experiment',BJORK,'Bjork 等 · Toxicology, 2011');
+
+const state = {filter:'all',tableQuery:'',selected:'PFOA',network:'PFOA',endpoint:null};
+const el = function(id){return document.getElementById(id);};
+const norm = function(text){return String(text || '').toLowerCase().trim();};
+const rowsFor = function(id){return relations.filter(function(r){return r.chemical === id;});};
+const getChemical = function(id){return chemicals.find(function(c){return c.id === id;});};
+const sourceLink = function(url,text){return '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + text + ' ↗</a>';};
+
+function renderTable(){
+  const visible = chemicals.filter(function(c){
+    const group = state.filter === 'all' || c.family === state.filter;
+    return group && norm([c.id,c.name,c.en,c.cas,c.familyName].join(' ')).includes(norm(state.tableQuery));
+  });
+  el('chemical-table').innerHTML = visible.length ? visible.map(function(c){
+    const count = rowsFor(c.id).length;
+    return '<tr class="chemical-row' + (state.selected===c.id?' selected':'') + '" data-chemical="' + c.id + '" tabindex="0" aria-label="查看 ' + c.id + ' 详情"><td><span class="chemical-name"><span class="chemical-icon">✳</span><span>' + c.id + '<span class="name-sub">' + c.name + '</span></span></span></td><td><span class="type-tag">' + c.familyName + '</span></td><td>' + c.cas + '</td><td><span class="rel-count">' + (count ? count + ' 条' : '尚未录入') + '</span></td><td><span class="row-arrow">↗</span></td></tr>';
+  }).join('') : '<tr><td class="empty-row" colspan="5">没有匹配记录。可尝试其他名称、CAS 号或清除筛选。</td></tr>';
+  el('table-status').textContent = '显示 ' + visible.length + ' / ' + chemicals.length + ' 个化合物';
+  document.querySelectorAll('.filter').forEach(function(button){button.classList.toggle('active',button.dataset.filter === state.filter);});
+}
+
+function renderDetail(){
+  const c = getChemical(state.selected);
+  const count = rowsFor(c.id).length;
+  const idx = String(chemicals.indexOf(c)+1).padStart(2,'0');
+  el('compound-detail').innerHTML = '<div class="detail-top"><span class="micro-label">CHEMICAL PROFILE</span><span class="detail-number">' + idx + ' /</span></div><div class="detail-symbol">F</div><h3>' + c.id + '</h3><p class="detail-desc">' + c.name + '<br>' + c.en + '</p><div class="detail-list"><div class="detail-line"><span>CAS 号</span><span>' + c.cas + '</span></div><div class="detail-line"><span>化合物类别</span><span>' + c.familyName + '</span></div><div class="detail-line"><span>原型中已整理</span><span>' + (count?count+' 条关系':'暂无关系记录') + '</span></div></div><div class="detail-actions"><button type="button" id="detail-graph">查看关系图谱 ↗</button>' + sourceLink(c.source,'核对名称 / CAS') + '</div>';
+  el('detail-graph').addEventListener('click',function(){state.network=c.id;state.endpoint=null;renderNetwork();document.getElementById('network').scrollIntoView({behavior:'smooth'});});
+}
+
+function renderNetwork(){
+  const current = getChemical(state.network);
+  const currentRows = rowsFor(current.id);
+  el('network-tabs').innerHTML = chemicals.map(function(c){return '<button type="button" data-network="' + c.id + '" class="' + (state.network===c.id?'active':'') + '" aria-pressed="' + (state.network===c.id) + '">' + c.id + '</button>';}).join('');
+  el('network-count').textContent = current.id + ' · ' + currentRows.length + ' 条已整理关系';
+  if(!currentRows.length){
+    el('graph').innerHTML = '<div class="empty-row">' + current.id + ' 暂未录入关系。<br>这不代表相关研究不存在。</div>';
+  } else {
+    const points = currentRows.map(function(r,i){const angle=(-Math.PI/2)+(Math.PI*2*i/currentRows.length);return {r:r,x:280+Math.cos(angle)*180,y:176+Math.sin(angle)*130};});
+    let graph = '<svg viewBox="0 0 560 352" role="group" aria-label="' + current.id + ' 的毒理关系图，点击节点筛选证据"><circle cx="280" cy="176" r="103" fill="none" stroke="#dfe9de" stroke-dasharray="3 7"/><circle cx="280" cy="176" r="70" fill="none" stroke="#edf2ed"/>';
+    points.forEach(function(p){graph += '<line x1="280" y1="176" x2="' + p.x.toFixed(1) + '" y2="' + p.y.toFixed(1) + '" stroke="#c5d7c7" stroke-width="1.4"/>';});
+    points.forEach(function(p){const isLab=p.r.kind==='experiment';graph += '<g class="graph-node' + (state.endpoint===p.r.endpoint?' chosen':'') + '" data-endpoint="' + p.r.endpoint + '" tabindex="0" role="button" aria-label="筛选' + outcomes[p.r.endpoint].label + '"><circle cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '" r="27" fill="' + (isLab?'#e5f0ef':'#f8eee3') + '" stroke="' + (isLab?'#a9c4c3':'#ddc3a5') + '"/><text x="' + p.x.toFixed(1) + '" y="' + (p.y+45).toFixed(1) + '" text-anchor="middle" fill="#637d6c" font-size="11" font-family="Noto Sans SC, sans-serif">' + outcomes[p.r.endpoint].short + '</text></g>';});
+    graph += '<circle cx="280" cy="176" r="37" fill="#315e4e"/><circle cx="280" cy="176" r="45" fill="none" stroke="#b7d0bb"/><text x="280" y="174" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="DM Sans, sans-serif">' + current.id + '</text><text x="280" y="192" text-anchor="middle" fill="#c8dfce" font-size="8" letter-spacing="1" font-family="DM Sans, sans-serif">COMPOUND</text></svg>';
+    el('graph').innerHTML = graph;
+  }
+  const shown=currentRows.filter(function(r){return !state.endpoint || state.endpoint===r.endpoint;});
+  el('evidence-number').textContent = String(shown.length).padStart(2,'0');
+  el('clear-node').hidden = !state.endpoint;
+  el('evidence-list').innerHTML = shown.length ? shown.map(function(r){
+    const lab=r.kind==='experiment';
+    const explanation=lab?'原代人和大鼠肝细胞研究涉及 PPARA 相关代谢反应；响应存在物种差异，不能据此直接推断人体风险。':'ATSDR 汇总的人群研究提示该化合物暴露与此终点有关联；研究关联不等于已证实因果。';
+    return '<article class="evidence-item"><div class="evidence-top"><span class="evidence-tag' + (lab?' lab':'') + '">' + (lab?'细胞实验':'人群研究 · 关联') + '</span><h4>' + outcomes[r.endpoint].label + '</h4></div><p>' + explanation + '</p>' + sourceLink(r.source,r.sourceName) + '</article>';
+  }).join('') : '<p class="empty-row">当前没有已整理的证据记录。</p>';
+}
+
+function selectChemical(id){state.selected=id;renderTable();renderDetail();}
+function showNetwork(id,key){state.network=id;state.endpoint=key || null;renderNetwork();el('network').scrollIntoView({behavior:'smooth'});}
+
+function runSearch(query,type){
+  const q=norm(query);
+  const feedback=el('search-feedback');
+  if(!q){feedback.textContent='请输入名称、CAS 号、靶点或健康终点。';return;}
+  const chemical=chemicals.find(function(c){return norm([c.id,c.name,c.en,c.cas].join(' ')).includes(q);});
+  const outcomeKey=Object.keys(outcomes).find(function(key){return norm(outcomes[key].label+' '+outcomes[key].short+' '+outcomes[key].aliases).includes(q);});
+  if(type!=='endpoint' && chemical){
+    state.filter='all';state.tableQuery=chemical.id;el('table-query').value=chemical.id;selectChemical(chemical.id);feedback.textContent='已找到：'+chemical.id+'（'+chemical.cas+'）';el('compounds').scrollIntoView({behavior:'smooth'});
+  }else if(type!=='chemical' && outcomeKey){
+    const found=relations.find(function(r){return r.endpoint===outcomeKey;});
+    if(found){feedback.textContent='已找到：'+outcomes[outcomeKey].label+'，可在图谱切换化合物。';showNetwork(found.chemical,outcomeKey);}
+  }else{feedback.textContent='当前原型没有找到“'+query+'”；未录入不代表没有相关研究。';}
+}
+
+function csvCell(value){return '"'+String(value===null?'':value).replace(/"/g,'""')+'"';}
+function downloadData(includeEmpty){
+  const result=[['化合物','中文名称','CAS号','化合物类别','关联终点或机制','证据类型','来源名称','来源链接']];
+  chemicals.forEach(function(c){
+    const items=rowsFor(c.id);
+    if(!items.length && includeEmpty){result.push([c.id,c.name,c.cas,c.familyName,'尚未录入','', '名称与CAS参考',c.source]);}
+    items.forEach(function(r){result.push([c.id,c.name,c.cas,c.familyName,outcomes[r.endpoint].label,r.kind==='experiment'?'细胞实验':'人群研究关联',r.sourceName,r.source]);});
+  });
+  const csv='\ufeff'+result.map(function(row){return row.map(csvCell).join(',');}).join('\r\n');
+  const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
+  const link=document.createElement('a');link.href=url;link.download=includeEmpty?'PFAS_Atlas_示例数据.csv':'PFAS_Atlas_关系表.csv';document.body.appendChild(link);link.click();link.remove();setTimeout(function(){URL.revokeObjectURL(url);},1000);
+}
+
+document.querySelectorAll('.filter').forEach(function(button){button.addEventListener('click',function(){state.filter=button.dataset.filter;renderTable();});});
+el('table-query').addEventListener('input',function(event){state.tableQuery=event.target.value;renderTable();});
+el('chemical-table').addEventListener('click',function(event){const row=event.target.closest('[data-chemical]');if(row)selectChemical(row.dataset.chemical);});
+el('chemical-table').addEventListener('keydown',function(event){const row=event.target.closest('[data-chemical]');if(row&&(event.key==='Enter'||event.key===' ')){event.preventDefault();selectChemical(row.dataset.chemical);}});
+el('network-tabs').addEventListener('click',function(event){const button=event.target.closest('[data-network]');if(button){state.network=button.dataset.network;state.endpoint=null;renderNetwork();}});
+function handleGraph(event){const node=event.target.closest('[data-endpoint]');if(node){state.endpoint=state.endpoint===node.dataset.endpoint?null:node.dataset.endpoint;renderNetwork();}}
+el('graph').addEventListener('click',handleGraph);
+el('graph').addEventListener('keydown',function(event){if(event.key==='Enter'||event.key===' '){event.preventDefault();handleGraph(event);}});
+el('clear-node').addEventListener('click',function(){state.endpoint=null;renderNetwork();});
+el('global-search').addEventListener('submit',function(event){event.preventDefault();runSearch(el('search-input').value,el('search-type').value);});
+document.querySelectorAll('[data-query]').forEach(function(button){button.addEventListener('click',function(){el('search-input').value=button.dataset.query;el('search-type').value='all';runSearch(button.dataset.query,'all');});});
+document.querySelectorAll('[data-export]').forEach(function(button){button.addEventListener('click',function(){downloadData(button.dataset.export==='all');});});
+el('chemical-count').textContent=String(chemicals.length).padStart(2,'0');
+el('relation-count').textContent=String(relations.length).padStart(2,'0');
+el('filter-total').textContent=String(chemicals.length).padStart(2,'0');
+renderTable();renderDetail();renderNetwork();
+
+</script>
+<script>
+'use strict';
+(function(){
+  const LN2=Math.log(2);
+  const presets={PFOA:{years:3.14,vd:0.43},PFOS:{years:3.36,vd:0.32},PFNA:{years:2.35,vd:0.19},PFHxS:{years:8.30,vd:0.29}};
+
+  // Input dose is per kg per day, Vd per kg; their ratio is concentration per day.
+  function concentration(time,p,halfLife){
+    const k=LN2/halfLife;
+    const exposed=Math.min(Math.max(time,0),p.duration);
+    const post=Math.max(0,time-p.duration);
+    const uptake=p.dose*(p.absorption/100)/p.vd;
+    const atStop=p.initial*Math.exp(-k*exposed)+uptake*(-Math.expm1(-k*exposed))/k;
+    return atStop*Math.exp(-k*post);
+  }
+  function summarize(p){
+    const atStop=concentration(Math.min(p.duration,p.horizon),p,p.half);
+    return {peak:Math.max(p.initial,atStop),final:concentration(p.horizon,p,p.half)};
+  }
+  if(typeof module!=='undefined'&&module.exports)module.exports={concentration:concentration,summarize:summarize,presets:presets};
+  if(typeof document==='undefined')return;
+
+  const byId=function(id){return document.getElementById(id);};
+  const form=byId('pk-form');
+  const chart=byId('pk-chart');
+  const readout=byId('pk-readout');
+  const error=byId('pk-error');
+  const note=byId('pk-preset-note');
+  let latest=null;
+  let cursorTime=0;
+  const fields=['dose','absorption','half','vd','duration','horizon','initial'];
+  const specs={dose:[0,1000000,'外部暴露剂量应在 0 至 1,000,000 µg/kg/天之间。'],absorption:[0,100,'吸收比例应在 0% 至 100% 之间。'],half:[0.01,100000,'消除半衰期应在 0.01 至 100,000 天之间。'],vd:[0.001,1000,'分布容积应在 0.001 至 1,000 L/kg 之间。'],duration:[0,36500,'持续暴露时间应在 0 至 36,500 天之间。'],horizon:[1,36500,'总模拟时长应在 1 至 36,500 天之间。'],initial:[0,1000000,'初始血清浓度应在 0 至 1,000,000 µg/L 之间。']};
+
+  function fmt(value){
+    if(!Number.isFinite(value))return '—';
+    if(value===0)return '0';
+    if(Math.abs(value)>=10000||Math.abs(value)<0.001)return value.toExponential(2);
+    return Number(value.toPrecision(4)).toLocaleString('en-US',{maximumFractionDigits:6});
+  }
+  function readParameters(){
+    const p={};
+    for(const field of fields){
+      const input=byId('pk-'+field);
+      const n=input.valueAsNumber;
+      const range=specs[field];
+      if(!Number.isFinite(n)||n<range[0]||n>range[1])return {error:range[2],input:input};
+      p[field]=n;
+    }
+    p.compound=byId('pk-preset').value;
+    return {values:p};
+  }
+  function valueAt(p,t){return {base:concentration(t,p,p.half),short:concentration(t,p,p.half*0.5),long:concentration(t,p,p.half*2)};}
+  function makeSeries(p){
+    const times=Array.from({length:601},function(_,i){return p.horizon*i/600;});
+    if(p.duration>0&&p.duration<p.horizon)times.push(p.duration);
+    times.sort(function(a,b){return a-b;});
+    return times.filter(function(t,i){return i===0||Math.abs(t-times[i-1])>1e-10;}).map(function(t){return Object.assign({time:t},valueAt(p,t));});
+  }
+  function graph(p,data){
+    const w=900,h=330,left=95,right=24,top=21,bottom=61,plotW=w-left-right,plotH=h-top-bottom;
+    const max=Math.max.apply(null,data.map(function(q){return Math.max(q.base,q.short,q.long);}));
+    const ymax=max>0?max*1.13:1;
+    const x=function(t){return left+plotW*t/p.horizon;};
+    const y=function(v){return top+plotH*(1-v/ymax);};
+    const line=function(key){return data.map(function(q,i){return (i?'L':'M')+x(q.time).toFixed(2)+','+y(q[key]).toFixed(2);}).join(' ');};
+    let svg='<svg viewBox="0 0 '+w+' '+h+'" role="img" tabindex="0" aria-label="血清浓度随时间变化的模拟曲线；包含输入半衰期、0.5 倍及 2 倍半衰期的对比。按左右方向键可查看曲线值。"><title>血清浓度预测曲线</title><desc>三条曲线只反映设定参数下的一室模型结果，对比情景并非置信区间。</desc>';
+    for(let i=0;i<=4;i++){
+      const value=ymax*i/4, yy=y(value);
+      svg+='<line x1="'+left+'" y1="'+yy.toFixed(2)+'" x2="'+(w-right)+'" y2="'+yy.toFixed(2)+'" stroke="#e5eee5"/><text x="'+(left-12)+'" y="'+(yy+4).toFixed(2)+'" text-anchor="end" fill="#91a698" font-size="12">'+fmt(value)+'</text>';
+    }
+    for(let i=0;i<=5;i++){
+      const t=p.horizon*i/5,xx=x(t);
+      svg+='<text x="'+xx.toFixed(2)+'" y="'+(top+plotH+22)+'" text-anchor="middle" fill="#91a698" font-size="12">'+fmt(t)+'</text>';
+    }
+    svg+='<text x="'+left+'" y="12" fill="#7f9989" font-size="11">血清浓度 (µg/L)</text><text x="'+(left+plotW/2)+'" y="'+(h-8)+'" text-anchor="middle" fill="#7f9989" font-size="11">时间（天）</text>';
+    if(p.duration<p.horizon){
+      const stop=x(p.duration);
+      svg+='<line x1="'+stop.toFixed(2)+'" y1="'+top+'" x2="'+stop.toFixed(2)+'" y2="'+(top+plotH)+'" stroke="#b8c9b8" stroke-dasharray="4 5"/><text x="'+Math.min(stop+7,w-105).toFixed(2)+'" y="'+(top+14)+'" fill="#93a996" font-size="10">停止暴露</text>';
+    }
+    svg+='<path d="'+line('long')+'" fill="none" stroke="#91aeb0" stroke-width="2.5" stroke-dasharray="7 5"/><path d="'+line('short')+'" fill="none" stroke="#d2a579" stroke-width="2.5" stroke-dasharray="4 5"/><path d="'+line('base')+'" fill="none" stroke="#3f7a5d" stroke-width="3"/>';
+    svg+='<line id="pk-guide" x1="'+left+'" y1="'+top+'" x2="'+left+'" y2="'+(top+plotH)+'" stroke="#82a58b" stroke-dasharray="3 5" visibility="hidden"/><circle id="pk-marker" r="5" fill="#3f7a5d" stroke="white" stroke-width="2" visibility="hidden"/><rect x="'+left+'" y="'+top+'" width="'+plotW+'" height="'+plotH+'" fill="transparent" data-pk-overlay="true"/></svg>';
+    chart.innerHTML=svg;
+    const svgEl=chart.querySelector('svg');
+    function focusAt(t){
+      cursorTime=Math.max(0,Math.min(p.horizon,t));
+      const point=valueAt(p,cursorTime);
+      const guide=byId('pk-guide');guide.setAttribute('x1',x(cursorTime));guide.setAttribute('x2',x(cursorTime));guide.setAttribute('visibility','visible');
+      const marker=byId('pk-marker');marker.setAttribute('cx',x(cursorTime));marker.setAttribute('cy',y(point.base));marker.setAttribute('visibility','visible');
+      readout.textContent='第 '+fmt(cursorTime)+' 天：基准 '+fmt(point.base)+'，0.5 倍 '+fmt(point.short)+'，2 倍 '+fmt(point.long)+' µg/L';
+    }
+    svgEl.addEventListener('pointermove',function(event){const bounds=svgEl.getBoundingClientRect();const local=(event.clientX-bounds.left)/bounds.width*w;focusAt((local-left)/plotW*p.horizon);});
+    svgEl.addEventListener('keydown',function(event){if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();focusAt(cursorTime+(event.key==='ArrowRight'?1:-1)*p.horizon/100);}});
+  }
+  function run(){
+    const checked=readParameters();
+    if(checked.error){error.textContent=checked.error;checked.input.focus();return;}
+    error.textContent='';
+    const p=checked.values;
+    const data=makeSeries(p);
+    latest={parameters:p,data:data};
+    byId('pk-export').disabled=false;
+    graph(p,data);
+    const summary=summarize(p);
+    byId('pk-max').textContent=fmt(summary.peak);
+    byId('pk-final').textContent=fmt(summary.final);
+    byId('pk-duration-result').textContent=fmt(p.duration);
+    readout.textContent='将鼠标移到曲线上，或聚焦曲线后按左右方向键查看数值。';
+    chart.setAttribute('aria-label','已更新模拟结果。');
+    const heading=document.querySelector('.pk-result-head p');
+    heading.textContent=p.duration>p.horizon?'当前曲线整个模拟期间仍处于持续暴露':'基准情景与消除半衰期敏感性对比';
+  }
+  function applyPreset(){
+    const selected=byId('pk-preset').value;
+    if(presets[selected]){
+      byId('pk-half').value=(presets[selected].years*365.25).toFixed(1);
+      byId('pk-vd').value=presets[selected].vd;
+      note.textContent=selected+' 的半衰期和 Vd 来自 Chiu 等（2022）的人群估计；暴露及吸收参数为示例假设。';
+    }else note.textContent='当前为自定义参数；请自行记录半衰期和 Vd 的来源。';
+    document.querySelector('.pk-result-head p').textContent='参数已修改，请点击“更新模拟曲线”。';
+    byId('pk-export').disabled=true;
+  }
+  function exportCurve(){
+    if(!latest)return;
+    const p=latest.parameters;
+    const headers=['时间(天)','基准浓度(µg/L)','半衰期0.5倍(µg/L)','半衰期2倍(µg/L)','化合物参数','外部剂量(µg/kg/天)','吸收比例(%)','半衰期(天)','Vd(L/kg)','暴露时间(天)','模拟时长(天)','初始浓度(µg/L)','模型','参数来源'];
+    const origin=p.compound==='custom'?'自定义半衰期与Vd，来源请自行记录':'仅半衰期和Vd参考：https://doi.org/10.1289/EHP10103';
+    const rows=latest.data.map(function(q){return [q.time,q.base,q.short,q.long,p.compound,p.dose,p.absorption,p.half,p.vd,p.duration,p.horizon,p.initial,'持续输入-单室一级消除；示意非风险预测',origin];});
+    const cell=function(v){return '"'+String(v).replace(/"/g,'""')+'"';};
+    const csv='\ufeff'+[headers].concat(rows).map(function(row){return row.map(cell).join(',');}).join('\r\n');
+    const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
+    const a=document.createElement('a');a.href=url;a.download='PFAS_动力学模拟曲线.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},1000);
+  }
+  form.addEventListener('submit',function(event){event.preventDefault();run();});
+  form.addEventListener('input',function(event){
+    if(event.target.id==='pk-half'||event.target.id==='pk-vd'){
+      byId('pk-preset').value='custom';note.textContent='当前为自定义参数；请自行记录半衰期和 Vd 的来源。';
+    }
+    document.querySelector('.pk-result-head p').textContent='参数已修改，请点击“更新模拟曲线”。';
+    byId('pk-export').disabled=true;
+  });
+  byId('pk-preset').addEventListener('change',applyPreset);
+  byId('pk-reset').addEventListener('click',function(){form.reset();applyPreset();run();});
+  byId('pk-export').addEventListener('click',exportCurve);
+  applyPreset();run();
+})();
+
+</script>
+</body>
+</html>
